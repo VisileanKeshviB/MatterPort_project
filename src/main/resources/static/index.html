@@ -1,0 +1,132 @@
+<html>
+<head>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="css/workshop.css">
+ -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="icon" type="image/png" sizes="16x16" href="https://static.matterport.com/cloud_ui/21.7.2-36-gb3ea48f9/images/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://static.matterport.com/cloud_ui/21.7.2-36-gb3ea48f9/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://static.matterport.com/cloud_ui/21.7.2-36-gb3ea48f9/images/favicons/favicon-96x96.png">
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
+<link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css"/>
+<script src="js/perfect-scrollable.min.js" type=text/javascript></script>
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js" ></script>
+
+ <script src="js/app.js" type=text/javascript> </script>
+    <script src="https://static.matterport.com/showcase-sdk/2.0.1-0-g64e7e88/sdk.js"></script>
+<script async="" src="https://static.matterport.com/showcase-sdk/client/3.1.42.14-0-gdc1e5f878/sdk-client.js"></script>
+
+<title>Visilean Project</title>
+</head>
+  <body>
+  <div class="container">
+  <div class="showcase_container">
+  
+   <!-- <button class="import_tags" style="bottom: 15px;
+  					left: 260px;"></button> -->
+   <button class="add_tag" style="position: absolute;
+  left: 160px;
+  bottom: 15px;
+  z-index: 1"><i class="fa fa-dot-circle-o" title="Add a new tag" style="color: white; "></i></button> 
+
+   
+  
+   <button class="remove_tags" style="position: absolute;
+  left: 200px;
+  bottom: 15px;
+  z-index: 1">
+   <i class="fa fa-trash"></i> </button>  
+   
+  <!--  //<button class="open-button" >Open Form</button> -->
+
+ <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+   
+     <button type="button" class="btn cancel" id="closebtn" onclick="closeForm()" 
+     style="margin-left: 240px;
+    margin-top: 1px;
+    font-size:11pt;
+    padding: 0px;
+    margin-right: 0px;
+    width: 30%;">&#10060;</button>
+      <h3 class="popup-title" style="margin-bottom:15px;">Create Issue
+    </h3>
+    <label for="title"><b>Title</b></label>
+		<input class="title" name="last0" type="text" value="title" ID="last0">
+    <label for="psw"><b>select Status</b></label>
+		<input class="w3-input w3-border w3-round-large" name="last1" type="text">
+    <label for="psw"><b>Issue Type</b></label>
+		<input class="w3-input w3-border w3-round-large" name="last2" type="text">
+    <label for="psw"><b>Issue sub type</b></label>
+		<input class="w3-input w3-border w3-round-large" name="last3" type="text">
+    <label for="psw"><b>Due Date</b></label>
+		<input class="w3-input w3-border w3-round-large" name="last4" type="text">
+    <label for="psw"><b>Description</b></label>
+		<input class="w3-input w3-border w3-round-large" name="last5" type="text" value="Enter a description">
+	<button class="button" style="margin-left:40%; margin-top:2px;">Done</button>
+  </form>
+</div>
+
+ 
+    <!-- <div class="popup-overlay" id="pop">
+   <button type="button" class="popup-exit" onclick="closeForm()">X</button>
+   <h3 class="popup-title">How wide is this Window?</h3>
+   <h4 class="popup-status">Unanswered</h4>
+   <ul class="choices"><li><input type="radio" id="0" value="0" name="choice">
+   <label for="0">10'</label></li><li>
+   <input type="radio" id="1" value="1" name="choice">
+   <label for="1">3'2''</label></li><li>
+   <input type="radio" id="2" value="2" name="choice">
+   <label for="2">6'5''</label></li><li>
+   <input type="radio" id="3" value="3" name="choice">
+   <label for="3">1'</label></li></ul></div>   
+ -->
+ 
+ 
+    <iframe class="showcase"
+    frameborder="0"
+    allow="xr-spatial-tracking; fullscreen"
+    src="https://mpembed.com/show/?m=${matSid}&amp;help=0&amp;play=1&amp;qs=1&amp;gt=0&amp;hr=0">
+    </iframe>
+    
+    <div id="console" style="display:block;">
+    <div id="content" class="ps ps--active-y">
+    	
+    </div>
+    <div id="listeners" class="ps">
+    	
+    </div>
+    
+    </div>
+    </div>
+    <!-- <div class="container">
+    <div class="nearby-tags" style="display: none;">
+    </div>
+    </div> -->
+    <!-- <div class="button_container">
+                <button class="remove_tags">Remove all tags</button>
+                <button class="add_tag">Place New Tag</button>
+                <button class="export_tags">Export tags</button>
+                <button title="mpSdk.Camera.moveInDirection('LEFT')" class="b_moveInDirection" data-val="LEFT">
+                <i class="fa fa-home" aria-hidden="true"></i></button>
+            </div>-->
+            <!-- <div class="tag_container">
+            <table class="scrollable" >
+            	<thead>
+                        <tr>
+                            <th align="left">Label</th>
+                            <th align="left">Description</th>
+                            <th align="left">Color</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+            </table>
+            </div>  -->
+            </div>
+   
+  <body>
+</html>
